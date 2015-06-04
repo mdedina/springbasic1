@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Form Handling</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+    	span{
+    		font-weight: bold;
+    	}
+    </style>
+</head>
+<body>
+	<h1>Form Submitted</h1>
+	<p>Thank you for submitting your application form, <span th:text="${first_name}"></span>! 
+	We will send you a confirmation for your application to your email: 
+	<a th:href="|mailto:${email}|" th:text="|${email}|"></a> 
+	</p>
+	<p>Here is the other information you submitted:</p>
+	<p>
+		Last Name: <span th:text="${last_name}"></span> <br />
+		Location: <span th:text="${location}"></span> <br />
+		You want to join because: <span th:text="${why}"></span>
+	</p>
+</body>
+</html>
